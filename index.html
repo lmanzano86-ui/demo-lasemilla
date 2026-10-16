@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Semilla Bakery Sandwich Shop — Panadería colombiana en Tampa</title>
+<meta name="description" content="La Semilla Bakery Sandwich Shop: panadería colombiana en Tampa. Empanadas, pan de bono, sándwich cubano y café colombiano. 4429 Gunn Hwy B.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--cream:#faf5ec;--paper:#fffdf8;--terra:#b45309;--terra-d:#92400e;--coffee:#3b2a1e;--ink:#2d2118;--mut:#7a6a5c;--line:#e8dcc8;--gold:#d97706;--green:#4d7c0f}
+body{font-family:'Segoe UI',system-ui,-apple-system,Arial,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;line-height:1.25}
+/* top bar */
+.top{background:var(--coffee);color:#f3e8d3;font-size:13px}
+.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding-top:8px;padding-bottom:8px}
+.top a{color:#f3e8d3;text-decoration:none;font-weight:700}
+.lang{display:flex;gap:6px}
+.lang button{border:1.5px solid #f3e8d3;background:transparent;color:#f3e8d3;border-radius:16px;padding:3px 13px;font-size:12px;font-weight:700;cursor:pointer}
+.lang button.on{background:var(--gold);border-color:var(--gold);color:#fff}
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:3px solid var(--terra);box-shadow:0 2px 10px rgba(59,42,30,.08)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:12px;padding-bottom:12px;gap:14px}
+.brand{font-family:Georgia,serif;font-weight:700;font-size:22px;color:var(--terra-d);text-decoration:none}
+.brand small{display:block;font-family:'Segoe UI',Arial,sans-serif;font-size:10px;letter-spacing:3px;color:var(--gold);font-weight:700}
+.links{display:flex;gap:18px;flex-wrap:wrap}
+.links a{color:var(--ink);text-decoration:none;font-weight:600;font-size:14.5px}
+.links a:hover{color:var(--terra)}
+.cta{background:var(--terra);color:#fff!important;padding:10px 20px;border-radius:12px;text-decoration:none;font-weight:800;font-size:14px}
+/* hero */
+.hero{background:var(--paper);border-bottom:1px solid var(--line)}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;padding-top:44px;padding-bottom:44px}
+.kick{display:inline-block;background:#fdeeda;color:var(--terra-d);font-size:12px;font-weight:800;letter-spacing:1.5px;border-radius:20px;padding:6px 16px;margin-bottom:14px;text-transform:uppercase}
+.hero h1{font-size:44px;color:var(--coffee);margin-bottom:12px}
+.hero h1 em{font-style:italic;color:var(--terra)}
+.hero p.lead{font-size:16.5px;color:var(--mut);margin-bottom:22px}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;border-radius:12px;font-weight:800;text-decoration:none;font-size:15px}
+.btn.hot{background:var(--terra);color:#fff}
+.btn.line{background:transparent;color:var(--terra-d);border:2px solid var(--terra)}
+.hero img{width:100%;border-radius:20px;box-shadow:0 14px 34px rgba(59,42,30,.18)}
+.stars-row{margin-top:16px;font-size:14px;color:var(--mut)}
+.stars-row b{color:var(--terra-d);font-size:17px}
+/* sections */
+section.block{padding:56px 0}
+.sec-head{margin-bottom:30px;max-width:640px}
+.sec-head h2{font-size:32px;color:var(--coffee);margin:8px 0 8px}
+.sec-head h2 em{font-style:italic;color:var(--terra)}
+.sec-head p{color:var(--mut);font-size:15.5px}
+/* favorites */
+.favs{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.fav{background:var(--paper);border-radius:18px;overflow:hidden;box-shadow:0 4px 16px rgba(59,42,30,.08);border:1px solid var(--line)}
+.fav img{width:100%;height:190px;object-fit:cover;display:block}
+.fav .fb{padding:20px 22px 24px}
+.fav .fb span{font-size:11.5px;font-weight:800;letter-spacing:1.5px;color:var(--gold);text-transform:uppercase}
+.fav h3{font-size:21px;margin:6px 0;color:var(--coffee)}
+.fav p{font-size:14px;color:var(--mut)}
+/* menu */
+.menu-sec{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.tabs button{border:2px solid var(--line);background:var(--cream);border-radius:22px;padding:9px 20px;font-weight:700;font-size:14px;cursor:pointer;color:var(--ink)}
+.tabs button.on{background:var(--terra);border-color:var(--terra);color:#fff}
+.dishes{display:grid;grid-template-columns:1fr 1fr;gap:4px 40px}
+.dish{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:11px 0;border-bottom:1px dashed var(--line)}
+.dish .n{font-weight:600;font-size:15.5px}
+.dish .n small{display:block;font-weight:400;color:var(--mut);font-size:12.5px}
+.dish .p{color:var(--terra-d);font-weight:800;white-space:nowrap;font-size:16.5px}
+.menu-note{margin-top:18px;font-size:13px;color:var(--mut);font-style:italic}
+/* morning band */
+.morning{background:linear-gradient(120deg,var(--terra-d),var(--terra));color:#fff;border-radius:22px;padding:44px 40px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.morning h2{font-size:30px;margin-bottom:10px}
+.morning h2 em{font-style:italic;color:#fde68a}
+.morning p{color:#fdeeda;font-size:15px;margin-bottom:8px}
+.morning .hours{background:rgba(255,255,255,.12);border-radius:14px;padding:18px 22px;font-size:14.5px}
+.morning .hours b{color:#fde68a}
+/* reviews */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rev{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px}
+.rev .st{color:var(--gold);letter-spacing:2px;margin-bottom:10px}
+.rev p{font-style:italic;font-size:14.5px}
+.rev .who{margin-top:12px;font-size:13px;color:var(--mut)}
+.rev .who b{color:var(--ink)}
+.g-badge{text-align:center;margin-top:24px;font-size:15px}
+.g-badge b{color:var(--terra-d);font-size:23px}
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:28px}
+.card h3{font-size:21px;color:var(--coffee);margin-bottom:12px}
+.card dl{display:grid;grid-template-columns:auto 1fr;gap:8px 16px;font-size:15px}
+.card dt{font-weight:700;color:var(--terra-d)}
+.card dd{margin:0}
+.card a{color:var(--terra-d);font-weight:700;text-decoration:none}
+.dbtn{display:inline-block;margin-top:6px;background:var(--terra);color:#fff!important;padding:12px 26px;border-radius:12px;text-decoration:none;font-weight:800}
+/* footer */
+footer{background:var(--coffee);color:#d9c9ae}
+footer .wrap{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;padding-top:44px;padding-bottom:28px}
+footer h4{color:#fff;margin-bottom:10px;font-size:15px}
+footer a{color:#d9c9ae;text-decoration:none}
+footer p,footer li{font-size:13.5px;list-style:none;margin-bottom:6px}
+.copy{border-top:1px solid rgba(255,255,255,.15);text-align:center;padding:14px;font-size:12px;color:#a89880}
+.wa{position:fixed;right:16px;bottom:16px;background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;box-shadow:0 8px 22px rgba(0,0,0,.28);z-index:60}
+@media(max-width:860px){
+.hero .wrap,.morning,.visit{grid-template-columns:1fr}
+.favs,.revs{grid-template-columns:1fr}
+.dishes{grid-template-columns:1fr}
+.links{display:none}
+.hero h1{font-size:34px}
+}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div class="wrap">
+    <span>📞 <a href="tel:+18138980080">(813) 898-0080</a> &nbsp;·&nbsp; 🕕 <span data-es="Lun–Vie · 6:00 AM – 8:00 PM" data-en="Mon–Fri · 6:00 AM – 8:00 PM">Lun–Vie · 6:00 AM – 8:00 PM</span></span>
+    <span class="lang"><button id="btn-es" class="on" onclick="setLang('es')">ES</button><button id="btn-en" onclick="setLang('en')">EN</button></span>
+  </div>
+</div>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#">La Semilla<small>BAKERY · SANDWICH SHOP</small></a>
+    <div class="links">
+      <a href="#favoritos" data-es="Favoritos" data-en="Favorites">Favoritos</a>
+      <a href="#menu" data-es="Menú" data-en="Menu">Menú</a>
+      <a href="#visitanos" data-es="Visítanos" data-en="Visit us">Visítanos</a>
+      <a href="#resenas" data-es="Opiniones" data-en="Reviews">Opiniones</a>
+    </div>
+    <a class="cta" href="https://www.doordash.com/store/la-semilla-bakery-sandwich-shop-tampa-921584/" target="_blank" rel="noopener" data-es="Pide a domicilio" data-en="Order delivery">Pide a domicilio</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kick" data-es="Panadería colombiana · Tampa" data-en="Colombian bakery · Tampa">Panadería colombiana · Tampa</span>
+      <h1 data-es="El sabor de Colombia, <em>recién horneado</em>" data-en="The taste of Colombia, <em>fresh from the oven</em>">El sabor de Colombia, <em>recién horneado</em></h1>
+      <p class="lead" data-es="Empanadas, pan de bono, sándwich cubano y café colombiano de verdad. Desayuno y almuerzo todos los días desde las 6 de la mañana." data-en="Empanadas, pan de bono, Cuban sandwich and real Colombian coffee. Breakfast and lunch every day from 6 in the morning.">Empanadas, pan de bono, sándwich cubano y café colombiano de verdad. Desayuno y almuerzo todos los días desde las 6 de la mañana.</p>
+      <div class="hero-btns">
+        <a class="btn hot" href="#menu" data-es="Ver el menú" data-en="See the menu">Ver el menú</a>
+        <a class="btn line" href="tel:+18138980080" data-es="Llamar ahora" data-en="Call now">Llamar ahora</a>
+      </div>
+      <div class="stars-row"><b>4.6 ★</b> <span data-es="431 reseñas en Google" data-en="431 Google reviews">431 reseñas en Google</span></div>
+    </div>
+    <img src="imgs/hero.jpg" alt="Vitrina de La Semilla con empanadas y pan de bono">
+  </div>
+</header>
+
+<section class="block" id="favoritos">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kick" data-es="Los de siempre" data-en="The classics">Los de siempre</span>
+      <h2 data-es="Lo que <em>vuelve</em> a la gente" data-en="What keeps people <em>coming back</em>">Lo que <em>vuelve</em> a la gente</h2>
+      <p data-es="Recetas colombianas hechas en casa, todos los días." data-en="Homemade Colombian recipes, every day.">Recetas colombianas hechas en casa, todos los días.</p>
+    </div>
+    <div class="favs">
+      <div class="fav">
+        <img src="imgs/empanadas.jpg" alt="Empanadas colombianas">
+        <div class="fb"><span data-es="Las famosas" data-en="The famous ones">Las famosas</span><h3 data-es="Empanadas" data-en="Empanadas">Empanadas</h3><p data-es="De carne, pollo, queso, plátano maduro con queso y más. Doraditas y rellenas de verdad." data-en="Beef, chicken, cheese, sweet plantain with cheese and more. Golden and generously filled.">De carne, pollo, queso, plátano maduro con queso y más. Doraditas y rellenas de verdad.</p></div>
+      </div>
+      <div class="fav">
+        <img src="imgs/pandebono.jpg" alt="Pan de bono">
+        <div class="fb"><span data-es="El mejor de Tampa" data-en="Tampa's best">El mejor de Tampa</span><h3 data-es="Pan de bono" data-en="Pan de bono">Pan de bono</h3><p data-es="El pan de queso colombiano que una reseña llamó “el mejor de Tampa”. Calientito con café." data-en="The Colombian cheese bread one review called "the best in Tampa". Warm with coffee.">El pan de bono — el pan de queso que una reseña llamó “el mejor de Tampa”. Calientito con café.</p></div>
+      </div>
+      <div class="fav">
+        <img src="imgs/cubano.jpg" alt="Sándwich cubano">
+        <div class="fb"><span data-es="Prensado en casa" data-en="Pressed in-house">Prensado en casa</span><h3 data-es="Sándwich cubano" data-en="Cuban sandwich">Sándwich cubano</h3><p data-es="En pan fresco prensado: jamón, cerdo, queso suizo y pepinillos. El favorito del almuerzo." data-en="On fresh pressed bread: ham, pork, Swiss cheese and pickles. The lunch favorite.">En pan fresco prensado: jamón, cerdo, queso suizo y pepinillos. El favorito del almuerzo.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block menu-sec" id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kick" data-es="Precios reales" data-en="Real prices">Precios reales</span>
+      <h2 data-es="El <em>menú</em>" data-en="The <em>menu</em>">El <em>menú</em></h2>
+      <p data-es="Lo que ves es lo que pagas. Precios de mostrador." data-en="What you see is what you pay. Counter prices.">Lo que ves es lo que pagas. Precios de mostrador.</p>
+    </div>
+    <div class="tabs" id="menu-tabs"></div>
+    <div class="dishes" id="menu-grid"></div>
+    <p class="menu-note" data-es="* Precios verificados en plataformas de delivery en octubre 2026; pueden variar en el local." data-en="* Prices verified on delivery platforms in October 2026; may vary in store.">* Precios verificados en plataformas de delivery en octubre 2026; pueden variar en el local.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="morning">
+      <div>
+        <h2 data-es="Desde las <em>6 de la mañana</em>" data-en="Open from <em>6 in the morning</em>">Desde las <em>6 de la mañana</em></h2>
+        <p data-es="Café colombiano recién hecho, calentado con huevo, arepa con queso y pan calientito para empezar el día como se debe." data-en="Fresh Colombian coffee, calentado with egg, arepa with cheese and warm bread to start the day right.">Café colombiano recién hecho, calentado con huevo, arepa con queso y pan calientito para empezar el día como se debe.</p>
+      </div>
+      <div class="hours">
+        <div><b data-es="Lun–Vie" data-en="Mon–Fri">Lun–Vie</b>: 6:00 AM – 8:00 PM</div>
+        <div><b data-es="Sábado" data-en="Saturday">Sábado</b>: 6:00 AM – 5:00 PM</div>
+        <div><b data-es="Domingo" data-en="Sunday">Domingo</b>: 6:00 AM – 4:00 PM</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="resenas" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kick" data-es="La clientela" data-en="The customers">La clientela</span>
+      <h2 data-es="Lo que dice <em>Tampa</em>" data-en="What <em>Tampa</em> says">Lo que dice <em>Tampa</em></h2>
+    </div>
+    <div class="revs">
+      <div class="rev">
+        <div class="st">★★★★★</div>
+        <p data-es="«El mejor pan de queso en Tampa. El pan de bono es obligado y el desayuno calentado es increíble.»" data-en="“The best cheese bread in Tampa. The pan de bono is a must and the calentado breakfast is incredible.”">«El mejor pan de queso en Tampa. El pan de bono es obligado y el desayuno calentado es increíble.»</p>
+        <div class="who"><b>Robert A.</b> · <span data-es="reseña de Google" data-en="Google review">reseña de Google</span></div>
+      </div>
+      <div class="rev">
+        <div class="st">★★★★★</div>
+        <p data-es="«Empanadas deliciosas de carne, pollo y queso. El café colombiano con pandebono es la combinación perfecta.»" data-en="“Delicious beef, chicken and cheese empanadas. Colombian coffee with pandebono is the perfect combo.”">«Empanadas deliciosas de carne, pollo y queso. El café colombiano con pandebono es la combinación perfecta.»</p>
+        <div class="who"><b data-es="Clienta frecuente" data-en="Regular customer">Clienta frecuente</b> · <span data-es="reseña de Google" data-en="Google review">reseña de Google</span></div>
+      </div>
+      <div class="rev">
+        <div class="st">★★★★★</div>
+        <p data-es="«Lugar increíble para desayunar. Precios justos y todo sabe casero.»" data-en="“Amazing breakfast spot. Fair prices and everything tastes homemade.”">«Lugar increíble para desayunar. Precios justos y todo sabe casero.»</p>
+        <div class="who"><b data-es="Vecino de Carrollwood" data-en="Carrollwood local">Vecino de Carrollwood</b> · <span data-es="reseña de Google" data-en="Google review">reseña de Google</span></div>
+      </div>
+    </div>
+    <div class="g-badge"><b>4.6 ★</b> <span data-es="· 431 reseñas en Google" data-en="· 431 Google reviews">· 431 reseñas en Google</span></div>
+  </div>
+</section>
+
+<section class="block" id="visitanos" style="background:var(--paper);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kick" data-es="Encuéntranos" data-en="Find us">Encuéntranos</span>
+      <h2 data-es="<em>Visítanos</em>" data-en="<em>Visit us</em>"><em>Visítanos</em></h2>
+    </div>
+    <div class="visit">
+      <div class="card">
+        <h3 data-es="La tienda" data-en="The shop">La tienda</h3>
+        <dl>
+          <dt data-es="Dirección" data-en="Address">Dirección</dt><dd>4429 Gunn Hwy B, Tampa, FL 33618</dd>
+          <dt data-es="Teléfono" data-en="Phone">Teléfono</dt><dd><a href="tel:+18138980080">(813) 898-0080</a></dd>
+          <dt>Delivery</dt><dd><a href="https://www.doordash.com/store/la-semilla-bakery-sandwich-shop-tampa-921584/" target="_blank" rel="noopener">DoorDash</a></dd>
+        </dl>
+        <br><a class="dbtn" href="https://www.google.com/maps/search/?api=1&query=La+Semilla+Bakery+Sandwich+Shop+4429+Gunn+Hwy+Tampa+FL" target="_blank" rel="noopener" data-es="Cómo llegar" data-en="Get directions">Cómo llegar</a>
+      </div>
+      <div class="card">
+        <h3 data-es="Horario" data-en="Hours">Horario</h3>
+        <dl>
+          <dt data-es="Lun–Vie" data-en="Mon–Fri">Lun–Vie</dt><dd>6:00 AM – 8:00 PM</dd>
+          <dt data-es="Sábado" data-en="Saturday">Sábado</dt><dd>6:00 AM – 5:00 PM</dd>
+          <dt data-es="Domingo" data-en="Sunday">Domingo</dt><dd>6:00 AM – 4:00 PM</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h4>La Semilla</h4>
+      <p data-es="Panadería colombiana y tienda de sándwiches en Tampa, FL." data-en="Colombian bakery and sandwich shop in Tampa, FL.">Panadería colombiana y tienda de sándwiches en Tampa, FL.</p>
+    </div>
+    <div>
+      <h4 data-es="Contacto" data-en="Contact">Contacto</h4>
+      <p>4429 Gunn Hwy B, Tampa, FL 33618</p>
+      <p><a href="tel:+18138980080">(813) 898-0080</a></p>
+    </div>
+    <div>
+      <h4 data-es="Horario" data-en="Hours">Horario</h4>
+      <p data-es="Lun–Vie 6AM–8PM · Sáb 6AM–5PM · Dom 6AM–4PM" data-en="Mon–Fri 6AM–8PM · Sat 6AM–5PM · Sun 6AM–4PM">Lun–Vie 6AM–8PM · Sáb 6AM–5PM · Dom 6AM–4PM</p>
+    </div>
+  </div>
+  <div class="copy">© 2026 La Semilla Bakery Sandwich Shop · <span data-es="Demo con fines ilustrativos" data-en="Demo for illustration purposes">Demo con fines ilustrativos</span></div>
+</footer>
+
+<a class="wa" href="https://wa.me/18138980080" target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
+
+<script>
+var MENU=[
+ {id:'fritos',es:'Empanadas y fritos',en:'Empanadas & fritters',items:[
+  {es:'Empanada de carne',en:'Beef empanada',d_es:'La famosa.',d_en:'The famous one.',p:'$3.00'},
+  {es:'Empanada de pollo',en:'Chicken empanada',d_es:'',d_en:'',p:'$3.00'},
+  {es:'Empanada de queso',en:'Cheese empanada',d_es:'',d_en:'',p:'$2.75'},
+  {es:'Chorizo con arepa',en:'Chorizo with arepa',d_es:'',d_en:'',p:'$6.00'},
+  {es:'Morcilla con arepa',en:'Morcilla with arepa',d_es:'',d_en:'',p:'$6.00'},
+  {es:'Tequeños',en:'Tequeños',d_es:'',d_en:'',p:'$2.00'}
+ ]},
+ {id:'pan',es:'Panadería',en:'Bakery',items:[
+  {es:'Pan de bono',en:'Pan de bono',d_es:'El mejor de Tampa, dicen.',d_en:'Tampa\u2019s best, they say.',p:'$2.00'},
+  {es:'Buñuelo',en:'Buñuelo',d_es:'',d_en:'',p:'$2.00'},
+  {es:'Pandeyuca',en:'Pandeyuca',d_es:'',d_en:'',p:'$2.25'},
+  {es:'Pandequeso',en:'Pandequeso',d_es:'',d_en:'',p:'$2.00'},
+  {es:'Pan con queso grande',en:'Large cheese bread',d_es:'',d_en:'',p:'$4.50'},
+  {es:'Almojábana',en:'Almojábana',d_es:'',d_en:'',p:'$2.25'}
+ ]},
+ {id:'sand',es:'Sándwiches',en:'Sandwiches',items:[
+  {es:'Sándwich cubano',en:'Cuban sandwich',d_es:'Prensado en pan fresco.',d_en:'Pressed on fresh bread.',p:'$8.25'},
+  {es:'Sándwich de jamón y queso',en:'Ham & cheese sandwich',d_es:'',d_en:'',p:'$8.50'},
+  {es:'Sándwich de pollo',en:'Chicken sandwich',d_es:'',d_en:'',p:'$11.00'},
+  {es:'Sándwich de desayuno',en:'Breakfast sandwich',d_es:'',d_en:'',p:'$8.25'},
+  {es:'Croissant jamón y queso',en:'Ham & cheese croissant',d_es:'',d_en:'',p:'$3.70'},
+  {es:'Arepa de choclo con queso',en:'Sweet corn arepa with cheese',d_es:'',d_en:'',p:'$6.00'}
+ ]},
+ {id:'des',es:'Desayunos',en:'Breakfast',items:[
+  {es:'Calentado con huevo y arepa',en:'Calentado with egg & arepa',d_es:'El favorito.',d_en:'The favorite.',p:'$12.50'},
+  {es:'Calentado con chicharrón',en:'Calentado with chicharrón',d_es:'',d_en:'',p:'$12.00'},
+  {es:'Arepa con queso',en:'Arepa with cheese',d_es:'',d_en:'',p:'$4.00'},
+  {es:'Huevos al gusto con arepa',en:'Eggs any style with arepa',d_es:'',d_en:'',p:'$4.00'}
+ ]},
+ {id:'alm',es:'Almuerzo',en:'Lunch',items:[
+  {es:'Mini bandeja paisa',en:'Mini bandeja paisa',d_es:'',d_en:'',p:'$17.50'},
+  {es:'Bistec encebollado',en:'Steak with onions',d_es:'Con arroz, plátano y ensalada.',d_en:'With rice, plantain & salad.',p:'$16.00'},
+  {es:'Pechuga a la plancha',en:'Grilled chicken breast',d_es:'Con arroz, frijoles y ensalada.',d_en:'With rice, beans & salad.',p:'$16.00'},
+  {es:'Tamales',en:'Tamales',d_es:'Carne, pollo y vegetales.',d_en:'Pork, chicken & veggies.',p:'$12.38'}
+ ]},
+ {id:'cafe',es:'Café y bebidas',en:'Coffee & drinks',items:[
+  {es:'Café con leche',en:'Café con leche',d_es:'Colombiano de verdad.',d_en:'Real Colombian.',p:'$3.00'},
+  {es:'Cortadito',en:'Cortadito',d_es:'',d_en:'',p:'$3.00'},
+  {es:'Cappuccino',en:'Cappuccino',d_es:'',d_en:'',p:'$3.25'},
+  {es:'Latte',en:'Latte',d_es:'',d_en:'',p:'$4.25'},
+  {es:'Chocolate de la abuela',en:'Grandma\u2019s hot chocolate',d_es:'',d_en:'',p:'$3.25'},
+  {es:'Jugo en leche',en:'Milkshake',d_es:'Fruta natural.',d_en:'Real fruit.',p:'$4.00'}
+ ]},
+ {id:'dul',es:'Dulces',en:'Sweets',items:[
+  {es:'Milhojas',en:'Milhojas',d_es:'',d_en:'',p:'$4.00'},
+  {es:'Pastel de guayaba y queso',en:'Guava & cheese pastry',d_es:'',d_en:'',p:'$4.12'},
+  {es:'Pastel gloria',en:'Pastel gloria',d_es:'',d_en:'',p:'$3.00'},
+  {es:'Brazo de reina',en:'Swiss roll',d_es:'',d_en:'',p:'$4.00'}
+ ]}
+];
+var curCat='fritos';
+function renderTabs(){
+  var l=document.documentElement.lang||'es';
+  document.getElementById('menu-tabs').innerHTML=MENU.map(function(c){
+    return '<button class="'+(c.id===curCat?'on':'')+'" onclick="curCat=\''+c.id+'\';renderTabs();renderMenu()">'+(l==='es'?c.es:c.en)+'</button>';
+  }).join('');
+}
+function renderMenu(){
+  var l=document.documentElement.lang||'es';
+  var c=MENU.find(function(x){return x.id===curCat;});
+  document.getElementById('menu-grid').innerHTML=c.items.map(function(it){
+    var n=l==='es'?it.es:it.en, d=l==='es'?it.d_es:it.d_en;
+    return '<div class="dish"><div class="n">'+n+(d?'<small>'+d+'</small>':'')+'</div><div class="p">'+it.p+'</div></div>';
+  }).join('');
+}
+function setLang(l){
+  document.querySelectorAll('[data-es]').forEach(function(el){
+    el.innerHTML=(l==='es')?el.getAttribute('data-es'):el.getAttribute('data-en');
+  });
+  document.documentElement.lang=l;
+  document.getElementById('btn-es').classList.toggle('on',l==='es');
+  document.getElementById('btn-en').classList.toggle('on',l==='en');
+  renderTabs();renderMenu();
+  try{localStorage.setItem('lsm-lang',l);}catch(e){}
+}
+(function(){try{var t=localStorage.getItem('lsm-lang');if(t==='en')setLang('en');}catch(e){}})();
+renderTabs();renderMenu();
+</script>
+</body>
+</html>
