@@ -128,7 +128,37 @@ nav{border-bottom:3px solid var(--gold)}
 .gal figcaption{padding:10px 14px;font-weight:600;font-size:14.5px}
 @media (max-width:860px){.gal{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.gal{grid-template-columns:1fr}}
+
+/* ===== Selector TEMPORAL de diseños (para que el dueño elija) ===== */
+[data-theme="anterior"]{--cream:#faf5ec;--paper:#fffdf8;--terra:#b45309;--terra-d:#92400e;--coffee:#3b2a1e;--ink:#2d2118;--mut:#7a6a5c;--line:#e8dcc8;--gold:#d97706;--board:#b45309}
+[data-theme="anterior"] nav{border-bottom:1px solid var(--line)}
+[data-theme="anterior"] .brand img{border-color:var(--terra)}
+[data-theme="anterior"] .cta{background:var(--terra)!important;color:#fff!important}
+[data-theme="anterior"] .kick{background:#fde8d7;color:var(--terra-d)}
+[data-theme="anterior"] .btn.hot{background:var(--terra);color:#fff}
+[data-theme="anterior"] .btn.line{border-color:var(--terra);color:var(--terra-d)}
+[data-theme="anterior"] #menu-tabs button.on{background:var(--terra);color:#fff;border-color:var(--terra)}
+[data-theme="anterior"] .morning{background:linear-gradient(120deg,#3b2a1e,#92400e);color:#f7ead9}
+[data-theme="anterior"] .dbtn{background:var(--terra);color:#fff}
+[data-theme="tablero"]{--cream:#fff9db;--paper:#fffef5;--terra:#c9930a;--terra-d:#8a6500;--coffee:#111111;--ink:#191919;--mut:#6f6547;--line:#efdf9e;--gold:#f2c230;--board:#111111}
+[data-theme="tablero"] nav{background:#f2c230;border-bottom:3px solid #111}
+[data-theme="tablero"] .brand img{border-color:#111}
+[data-theme="tablero"] .cta{background:#111!important;color:#f2c230!important}
+[data-theme="tablero"] .kick{background:#111;color:#f2c230}
+[data-theme="tablero"] .btn.hot{background:#f2c230;color:#111;border:2px solid #111}
+[data-theme="tablero"] .btn.line{border-color:#111;color:#111}
+[data-theme="tablero"] #menu-tabs button.on{background:#111;color:#f2c230;border-color:#111}
+[data-theme="tablero"] .morning{background:#f2c230;color:#111}
+[data-theme="tablero"] .dbtn{background:#111;color:#f2c230}
+.tswitch{position:fixed;left:16px;bottom:16px;z-index:90;display:flex;flex-direction:column;align-items:flex-start}
+.tbtn{background:#111;color:#f2c230;border:2px solid #f2c230;border-radius:999px;padding:10px 16px;font-weight:700;font-size:14px;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,.28)}
+.topts{display:none;background:#fff;border:1px solid #e5ddc8;border-radius:14px;padding:12px;margin-bottom:10px;box-shadow:0 12px 30px rgba(0,0,0,.20);max-width:264px}
+.tswitch.open .topts{display:block}
+.topts p{font-size:12.5px;color:#7a6a52;margin-bottom:4px;line-height:1.45}
+.topts button{display:block;width:100%;text-align:left;background:#faf6ec;border:1px solid #e5ddc8;border-radius:10px;padding:9px 12px;margin-top:6px;font-weight:600;font-size:14px;cursor:pointer;color:#241c10}
+.topts button.on{outline:2px solid #7a5c00;background:#f7e8b8}
 </style>
+<script>try{var t=localStorage.getItem('lsm-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
 </head>
 <body>
 
@@ -325,6 +355,15 @@ nav{border-bottom:3px solid var(--gold)}
 
 <a class="wa" href="https://wa.me/18138980080" target="_blank" rel="noopener" aria-label="WhatsApp">✆</a>
 
+<div class="tswitch" id="tswitch">
+  <div class="topts">
+    <p data-es="Botón temporal: toca un diseño para verlo en toda la página y elige tu favorito." data-en="Temporary button: tap a design to preview it across the whole page and pick your favorite.">Botón temporal: toca un diseño para verlo en toda la página y elige tu favorito.</p>
+    <button data-t="logo" onclick="setTheme('logo')" data-es="1 · Negro y dorado (logo)" data-en="1 · Black and gold (logo)">1 · Negro y dorado (logo)</button>
+    <button data-t="anterior" onclick="setTheme('anterior')" data-es="2 · Terracota (el anterior)" data-en="2 · Terracotta (the previous one)">2 · Terracota (el anterior)</button>
+    <button data-t="tablero" onclick="setTheme('tablero')" data-es="3 · Amarillo tablero (del menú)" data-en="3 · Menu-board yellow">3 · Amarillo tablero (del menú)</button>
+  </div>
+  <button class="tbtn" onclick="document.getElementById('tswitch').classList.toggle('open')">🎨 <span data-es="Diseños" data-en="Designs">Diseños</span></button>
+</div>
 <script>
 var MENU=[
  {id:'des',es:'Desayuno',en:'Breakfast',items:[
@@ -426,6 +465,12 @@ function setLang(l){
 }
 (function(){try{var t=localStorage.getItem('lsm-lang');if(t==='en')setLang('en');}catch(e){}})();
 renderTabs();renderMenu();
+function setTheme(t){
+  document.documentElement.setAttribute('data-theme',t);
+  try{localStorage.setItem('lsm-theme',t);}catch(e){}
+  document.querySelectorAll('.topts button').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-t')===t);});
+}
+(function(){var t=document.documentElement.getAttribute('data-theme')||'logo';setTheme(t);})();
 </script>
 </body>
 </html>
