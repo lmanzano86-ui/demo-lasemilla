@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>La Semilla Bakery Sandwich Shop — Panadería colombiana en Tampa</title>
+<link rel="icon" type="image/jpeg" href="imgs/logo.jpg">
 <meta name="description" content="La Semilla Bakery Sandwich Shop: panadería colombiana en Tampa. Empanadas, pan de bono, sándwich cubano y café colombiano. 4429 Gunn Hwy B.">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -99,13 +100,34 @@ footer a{color:#d9c9ae;text-decoration:none}
 footer p,footer li{font-size:13.5px;list-style:none;margin-bottom:6px}
 .copy{border-top:1px solid rgba(255,255,255,.15);text-align:center;padding:14px;font-size:12px;color:#a89880}
 .wa{position:fixed;right:16px;bottom:16px;background:#25d366;color:#fff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:28px;text-decoration:none;box-shadow:0 8px 22px rgba(0,0,0,.28);z-index:60}
-@media(max-width:860px){
+@media (max-width:860px){
 .hero .wrap,.morning,.visit{grid-template-columns:1fr}
 .favs,.revs{grid-template-columns:1fr}
 .dishes{grid-template-columns:1fr}
 .links{display:none}
 .hero h1{font-size:34px}
 }
+
+/* ===== Rediseño 2026-10-20: marca negro/dorado del logo + fotos reales del dueño ===== */
+:root{--cream:#faf6ec;--terra:#a67c00;--terra-d:#7a5c00;--coffee:#14100a;--ink:#241c10;--mut:#7a6a52;--line:#e9dcba;--gold:#caa437;--board:#f2c230}
+nav{border-bottom:3px solid var(--gold)}
+.brand{display:flex;align-items:center;gap:11px}
+.brand img{width:46px;height:46px;border-radius:50%;object-fit:cover;border:2px solid var(--gold)}
+.brand>span{color:var(--ink);line-height:1.1}
+.cta{background:var(--coffee)!important;color:var(--gold)!important}
+.kick{background:#f7e8b8;color:var(--terra-d)}
+.btn.hot{background:var(--coffee);color:var(--gold)}
+.btn.line{border-color:var(--gold)}
+#menu-tabs button.on{background:var(--board);color:#14100a;border-color:var(--board)}
+.morning{background:linear-gradient(120deg,#14100a,#3a2b0d);color:#eadfc2}
+.dbtn{background:var(--coffee);color:var(--gold)}
+.fpr{font-family:Georgia,serif;font-weight:700;font-size:19px;color:var(--terra-d);margin-top:8px}
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+.gal figure{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.gal img{width:100%;height:200px;object-fit:cover;display:block}
+.gal figcaption{padding:10px 14px;font-weight:600;font-size:14.5px}
+@media (max-width:860px){.gal{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.gal{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -119,10 +141,11 @@ footer p,footer li{font-size:13.5px;list-style:none;margin-bottom:6px}
 
 <nav>
   <div class="wrap">
-    <a class="brand" href="#">La Semilla<small>BAKERY · SANDWICH SHOP</small></a>
+    <a class="brand" href="#"><img src="imgs/logo.jpg" alt="Logo de La Semilla Bakery"><span>La Semilla<small>BAKERY · SANDWICH SHOP</small></span></a>
     <div class="links">
       <a href="#favoritos" data-es="Favoritos" data-en="Favorites">Favoritos</a>
       <a href="#menu" data-es="Menú" data-en="Menu">Menú</a>
+      <a href="#galeria" data-es="Galería" data-en="Gallery">Galería</a>
       <a href="#visitanos" data-es="Visítanos" data-en="Visit us">Visítanos</a>
       <a href="#resenas" data-es="Opiniones" data-en="Reviews">Opiniones</a>
     </div>
@@ -142,7 +165,7 @@ footer p,footer li{font-size:13.5px;list-style:none;margin-bottom:6px}
       </div>
       <div class="stars-row"><b>4.6 ★</b> <span data-es="431 reseñas en Google" data-en="431 Google reviews">431 reseñas en Google</span></div>
     </div>
-    <img src="imgs/hero.jpg" alt="Vitrina de La Semilla con empanadas y pan de bono">
+    <img src="imgs/hero.jpg" alt="Mesa de La Semilla: empanadas, calentado, tamal y sándwich cubano">
   </div>
 </header>
 
@@ -156,15 +179,15 @@ footer p,footer li{font-size:13.5px;list-style:none;margin-bottom:6px}
     <div class="favs">
       <div class="fav">
         <img src="imgs/empanadas.jpg" alt="Empanadas colombianas">
-        <div class="fb"><span data-es="Las famosas" data-en="The famous ones">Las famosas</span><h3 data-es="Empanadas" data-en="Empanadas">Empanadas</h3><p data-es="De carne, pollo, queso, plátano maduro con queso y más. Doraditas y rellenas de verdad." data-en="Beef, chicken, cheese, sweet plantain with cheese and more. Golden and generously filled.">De carne, pollo, queso, plátano maduro con queso y más. Doraditas y rellenas de verdad.</p></div>
+        <div class="fb"><span data-es="Las famosas" data-en="The famous ones">Las famosas</span><h3 data-es="Empanadas" data-en="Empanadas">Empanadas</h3><p data-es="De carne, pollo, queso, plátano maduro con queso y más. Doraditas y rellenas de verdad." data-en="Beef, chicken, cheese, sweet plantain with cheese and more. Golden and generously filled.">De carne, pollo, queso, plátano maduro con queso y más. Doraditas y rellenas de verdad.</p><div class="fpr" data-es="desde $2.25" data-en="from $2.25">desde $2.25</div></div>
       </div>
       <div class="fav">
         <img src="imgs/pandebono.jpg" alt="Pan de bono">
-        <div class="fb"><span data-es="El mejor de Tampa" data-en="Tampa's best">El mejor de Tampa</span><h3 data-es="Pan de bono" data-en="Pan de bono">Pan de bono</h3><p data-es="El pan de queso colombiano que una reseña llamó “el mejor de Tampa”. Calientito con café." data-en="The Colombian cheese bread one review called "the best in Tampa". Warm with coffee.">El pan de bono — el pan de queso que una reseña llamó “el mejor de Tampa”. Calientito con café.</p></div>
+        <div class="fb"><span data-es="El mejor de Tampa" data-en="Tampa's best">El mejor de Tampa</span><h3 data-es="Pan de bono" data-en="Pan de bono">Pan de bono</h3><p data-es="El pan de queso colombiano que una reseña llamó “el mejor de Tampa”. Calientito con café." data-en="The Colombian cheese bread one review called "the best in Tampa". Warm with coffee.">El pan de bono — el pan de queso que una reseña llamó “el mejor de Tampa”. Calientito con café.</p><div class="fpr">$1.75</div></div>
       </div>
       <div class="fav">
         <img src="imgs/cubano.jpg" alt="Sándwich cubano">
-        <div class="fb"><span data-es="Prensado en casa" data-en="Pressed in-house">Prensado en casa</span><h3 data-es="Sándwich cubano" data-en="Cuban sandwich">Sándwich cubano</h3><p data-es="En pan fresco prensado: jamón, cerdo, queso suizo y pepinillos. El favorito del almuerzo." data-en="On fresh pressed bread: ham, pork, Swiss cheese and pickles. The lunch favorite.">En pan fresco prensado: jamón, cerdo, queso suizo y pepinillos. El favorito del almuerzo.</p></div>
+        <div class="fb"><span data-es="Prensado en casa" data-en="Pressed in-house">Prensado en casa</span><h3 data-es="Sándwich cubano" data-en="Cuban sandwich">Sándwich cubano</h3><p data-es="En pan fresco prensado: jamón, cerdo, queso suizo y pepinillos. El favorito del almuerzo." data-en="On fresh pressed bread: ham, pork, Swiss cheese and pickles. The lunch favorite.">En pan fresco prensado: jamón, cerdo, queso suizo y pepinillos. El favorito del almuerzo.</p><div class="fpr">$9.00</div></div>
       </div>
     </div>
   </div>
@@ -179,7 +202,7 @@ footer p,footer li{font-size:13.5px;list-style:none;margin-bottom:6px}
     </div>
     <div class="tabs" id="menu-tabs"></div>
     <div class="dishes" id="menu-grid"></div>
-    <p class="menu-note" data-es="* Precios verificados en plataformas de delivery en octubre 2026; pueden variar en el local." data-en="* Prices verified on delivery platforms in October 2026; may vary in store.">* Precios verificados en plataformas de delivery en octubre 2026; pueden variar en el local.</p>
+    <p class="menu-note" data-es="* Precios del menú de mostrador del local (octubre 2026)." data-en="* Prices from the in-store counter menu (October 2026).">* Precios del menú de mostrador del local (octubre 2026).</p>
   </div>
 </section>
 
@@ -195,6 +218,33 @@ footer p,footer li{font-size:13.5px;list-style:none;margin-bottom:6px}
         <div><b data-es="Sábado" data-en="Saturday">Sábado</b>: 6:00 AM – 5:00 PM</div>
         <div><b data-es="Domingo" data-en="Sunday">Domingo</b>: 6:00 AM – 4:00 PM</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="galeria">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kick" data-es="Galería" data-en="Gallery">Galería</span>
+      <h2 data-es="Fotos <em>reales</em> de la casa" data-en="Real <em>photos</em> from our kitchen">Fotos <em>reales</em> de la casa</h2>
+      <p data-es="Todo lo que ves se prepara aquí mismo, en Gunn Hwy." data-en="Everything you see is made right here on Gunn Hwy.">Todo lo que ves se prepara aquí mismo, en Gunn Hwy.</p>
+    </div>
+    <div class="gal">
+      <figure><img src="imgs/g-surtido.jpg" alt="Surtido recién horneado"><figcaption data-es="De todo un poco, recién horneado" data-en="A little of everything, fresh from the oven">De todo un poco, recién horneado</figcaption></figure>
+      <figure><img src="imgs/g-calentado.jpg" alt="Calentado de La Semilla"><figcaption data-es="El calentado de la casa" data-en="Our house calentado">El calentado de la casa</figcaption></figure>
+      <figure><img src="imgs/g-alfajores.jpg" alt="Alfajores"><figcaption data-es="Alfajores de arequipe" data-en="Dulce de leche alfajores">Alfajores de arequipe</figcaption></figure>
+      <figure><img src="imgs/g-bistec.jpg" alt="Bistec encebollado"><figcaption data-es="Bistec encebollado" data-en="Steak with onions">Bistec encebollado</figcaption></figure>
+      <figure><img src="imgs/g-brazo.jpg" alt="Brazo de reina"><figcaption data-es="Brazo de reina" data-en="Swiss roll">Brazo de reina</figcaption></figure>
+      <figure><img src="imgs/g-bunuelo.jpg" alt="Buñuelos"><figcaption data-es="Buñuelos" data-en="Cheese buñuelos">Buñuelos</figcaption></figure>
+      <figure><img src="imgs/g-pechuga.jpg" alt="Pechuga a la plancha"><figcaption data-es="Pechuga a la plancha" data-en="Grilled chicken breast">Pechuga a la plancha</figcaption></figure>
+      <figure><img src="imgs/g-croissant.jpg" alt="Croissant"><figcaption data-es="Croissant de la casa" data-en="House croissant">Croissant de la casa</figcaption></figure>
+      <figure><img src="imgs/g-cambray.jpg" alt="Empanada de cambray"><figcaption data-es="Empanada de cambray" data-en="Guava and cheese cambray">Empanada de cambray</figcaption></figure>
+      <figure><img src="imgs/g-pollo.jpg" alt="Sánduche de pollo"><figcaption data-es="Sánduche de pollo" data-en="Chicken sandwich">Sánduche de pollo</figcaption></figure>
+      <figure><img src="imgs/g-tamal.jpg" alt="Tamal colombiano"><figcaption data-es="Tamal colombiano" data-en="Colombian tamal">Tamal colombiano</figcaption></figure>
+      <figure><img src="imgs/g-choclo.jpg" alt="Arepa de choclo con queso"><figcaption data-es="Arepa de choclo con queso" data-en="Sweet corn arepa with cheese">Arepa de choclo con queso</figcaption></figure>
+      <figure><img src="imgs/g-cafe.jpg" alt="Café caliente"><figcaption data-es="Café y chocolate calientes" data-en="Hot coffee and chocolate">Café y chocolate calientes</figcaption></figure>
+      <figure><img src="imgs/g-pandulce.jpg" alt="Pan dulce con café con leche"><figcaption data-es="Pan dulce con café con leche" data-en="Sweet bread with café con leche">Pan dulce con café con leche</figcaption></figure>
+      <figure><img src="imgs/g-huevos.jpg" alt="Calentado con huevo"><figcaption data-es="Calentado con huevo y arepa con queso" data-en="Calentado with egg and cheese arepa">Calentado con huevo y arepa con queso</figcaption></figure>
     </div>
   </div>
 </section>
@@ -277,58 +327,79 @@ footer p,footer li{font-size:13.5px;list-style:none;margin-bottom:6px}
 
 <script>
 var MENU=[
- {id:'fritos',es:'Empanadas y fritos',en:'Empanadas & fritters',items:[
-  {es:'Empanada de carne',en:'Beef empanada',d_es:'La famosa.',d_en:'The famous one.',p:'$3.00'},
-  {es:'Empanada de pollo',en:'Chicken empanada',d_es:'',d_en:'',p:'$3.00'},
-  {es:'Empanada de queso',en:'Cheese empanada',d_es:'',d_en:'',p:'$2.75'},
-  {es:'Chorizo con arepa',en:'Chorizo with arepa',d_es:'',d_en:'',p:'$6.00'},
-  {es:'Morcilla con arepa',en:'Morcilla with arepa',d_es:'',d_en:'',p:'$6.00'},
-  {es:'Tequeños',en:'Tequeños',d_es:'',d_en:'',p:'$2.00'}
- ]},
- {id:'pan',es:'Panadería',en:'Bakery',items:[
-  {es:'Pan de bono',en:'Pan de bono',d_es:'El mejor de Tampa, dicen.',d_en:'Tampa\u2019s best, they say.',p:'$2.00'},
-  {es:'Buñuelo',en:'Buñuelo',d_es:'',d_en:'',p:'$2.00'},
-  {es:'Pandeyuca',en:'Pandeyuca',d_es:'',d_en:'',p:'$2.25'},
-  {es:'Pandequeso',en:'Pandequeso',d_es:'',d_en:'',p:'$2.00'},
-  {es:'Pan con queso grande',en:'Large cheese bread',d_es:'',d_en:'',p:'$4.50'},
-  {es:'Almojábana',en:'Almojábana',d_es:'',d_en:'',p:'$2.25'}
- ]},
- {id:'sand',es:'Sándwiches',en:'Sandwiches',items:[
-  {es:'Sándwich cubano',en:'Cuban sandwich',d_es:'Prensado en pan fresco.',d_en:'Pressed on fresh bread.',p:'$8.25'},
-  {es:'Sándwich de jamón y queso',en:'Ham & cheese sandwich',d_es:'',d_en:'',p:'$8.50'},
-  {es:'Sándwich de pollo',en:'Chicken sandwich',d_es:'',d_en:'',p:'$11.00'},
-  {es:'Sándwich de desayuno',en:'Breakfast sandwich',d_es:'',d_en:'',p:'$8.25'},
-  {es:'Croissant jamón y queso',en:'Ham & cheese croissant',d_es:'',d_en:'',p:'$3.70'},
-  {es:'Arepa de choclo con queso',en:'Sweet corn arepa with cheese',d_es:'',d_en:'',p:'$6.00'}
- ]},
- {id:'des',es:'Desayunos',en:'Breakfast',items:[
-  {es:'Calentado con huevo y arepa',en:'Calentado with egg & arepa',d_es:'El favorito.',d_en:'The favorite.',p:'$12.50'},
-  {es:'Calentado con chicharrón',en:'Calentado with chicharrón',d_es:'',d_en:'',p:'$12.00'},
-  {es:'Arepa con queso',en:'Arepa with cheese',d_es:'',d_en:'',p:'$4.00'},
-  {es:'Huevos al gusto con arepa',en:'Eggs any style with arepa',d_es:'',d_en:'',p:'$4.00'}
+ {id:'des',es:'Desayuno',en:'Breakfast',items:[
+  {es:'Arepa de chocolo con queso',en:'Sweet corn arepa with cheese',d_es:'Arepa de maíz dulce con queso derretido.',d_en:'Sweet corn arepa with melted cheese.',p:'$5.32'},
+  {es:'Arepa de chocolo sin queso',en:'Sweet corn arepa, plain',d_es:'Arepa de maíz dulce, dorada a la plancha.',d_en:'Sweet corn arepa, grilled golden.',p:'$4.68'},
+  {es:'Arepa blanca con queso',en:'White arepa with cheese',d_es:'Arepa blanca con queso.',d_en:'White corn arepa with cheese.',p:'$4.50'},
+  {es:'Arepa blanca sin queso',en:'White arepa, plain',d_es:'Arepa blanca a la plancha.',d_en:'Grilled white corn arepa.',p:'$4.50'},
+  {es:'Arepa blanca con hogao',en:'White arepa with hogao',d_es:'Con hogao casero de tomate y cebolla.',d_en:'With homemade tomato-onion hogao.',p:'$7.25'},
+  {es:'Arepa de queso mozzarella',en:'Mozzarella arepa',d_es:'Rellena de mozzarella derretida.',d_en:'Filled with melted mozzarella.',p:'$4.50'},
+  {es:'Pan seda (cheese roll)',en:'Pan seda (cheese roll)',d_es:'Panecillo suave de queso.',d_en:'Soft cheese roll.',p:'$2.50'},
+  {es:'Huevos al gusto con arepa y queso',en:'Eggs your way with arepa & cheese',d_es:'Huevos a tu gusto, con arepa y queso.',d_en:'Eggs your way, with arepa and cheese.',p:'$10.50'},
+  {es:'Huevos con arepa, queso y chorizo',en:'Eggs with arepa, cheese & chorizo',d_es:'Desayuno completo con chorizo.',d_en:'Full breakfast with chorizo.',p:'$13.50'},
+  {es:'Calentado con huevo, arepa y queso',en:'Calentado with egg, arepa & cheese',d_es:'Arroz y frijoles recalentados como en casa.',d_en:'Rice and beans reheated home-style.',p:'$13.00'},
+  {es:'Calentado con huevos, arepa, queso y chorizo',en:'Calentado with eggs, arepa, cheese & chorizo',d_es:'Calentado completo con chorizo.',d_en:'Full calentado with chorizo.',p:'$15.75'},
+  {es:'Calentado con huevos, arepa, queso y morcilla',en:'Calentado with eggs, arepa, cheese & morcilla',d_es:'Calentado completo con morcilla.',d_en:'Full calentado with blood sausage.',p:'$15.75'},
+  {es:'Empanada de carne',en:'Beef empanada',d_es:'Crujiente, con ají de la casa.',d_en:'Crispy, with house ají sauce.',p:'$2.75'},
+  {es:'Empanada de pollo',en:'Chicken empanada',d_es:'Crujiente, con ají de la casa.',d_en:'Crispy, with house ají sauce.',p:'$2.75'},
+  {es:'Empanada de queso',en:'Cheese empanada',d_es:'Solo queso, dorada y crujiente.',d_en:'Cheese only, golden and crispy.',p:'$2.25'},
+  {es:'Chorizo con arepa',en:'Chorizo with arepa',d_es:'Chorizo a la plancha con arepa.',d_en:'Grilled chorizo with arepa.',p:'$5.50'},
+  {es:'Morcilla con arepa',en:'Morcilla with arepa',d_es:'Morcilla a la plancha con arepa.',d_en:'Grilled blood sausage with arepa.',p:'$5.50'}
  ]},
  {id:'alm',es:'Almuerzo',en:'Lunch',items:[
-  {es:'Mini bandeja paisa',en:'Mini bandeja paisa',d_es:'',d_en:'',p:'$17.50'},
-  {es:'Bistec encebollado',en:'Steak with onions',d_es:'Con arroz, plátano y ensalada.',d_en:'With rice, plantain & salad.',p:'$16.00'},
-  {es:'Pechuga a la plancha',en:'Grilled chicken breast',d_es:'Con arroz, frijoles y ensalada.',d_en:'With rice, beans & salad.',p:'$16.00'},
-  {es:'Tamales',en:'Tamales',d_es:'Carne, pollo y vegetales.',d_en:'Pork, chicken & veggies.',p:'$12.38'}
+  {es:'Bistec encebollado',en:'Steak with onions',d_es:'Con frijoles, arroz, ensalada y tajadas de maduro.',d_en:'With beans, rice, salad and sweet plantains.',p:'$12.00'},
+  {es:'Pechuga a la plancha',en:'Grilled chicken breast',d_es:'Con arroz, ensalada y tajadas de maduro.',d_en:'With rice, salad and sweet plantains.',p:'$12.00'},
+  {es:'Tamal colombiano',en:'Colombian tamal',d_es:'Envuelto en hoja de plátano, como el de la abuela.',d_en:'Wrapped in plantain leaf, grandma-style.',p:'$11.50'},
+  {es:'Bandeja paisa',en:'Bandeja paisa',d_es:'Arroz, carne, tajadas, arepa, frijoles, huevo frito y chorizo o morcilla.',d_en:'Rice, beef, plantains, arepa, beans, fried egg and chorizo or morcilla.',p:'$19.00'}
  ]},
- {id:'cafe',es:'Café y bebidas',en:'Coffee & drinks',items:[
-  {es:'Café con leche',en:'Café con leche',d_es:'Colombiano de verdad.',d_en:'Real Colombian.',p:'$3.00'},
-  {es:'Cortadito',en:'Cortadito',d_es:'',d_en:'',p:'$3.00'},
-  {es:'Cappuccino',en:'Cappuccino',d_es:'',d_en:'',p:'$3.25'},
-  {es:'Latte',en:'Latte',d_es:'',d_en:'',p:'$4.25'},
-  {es:'Chocolate de la abuela',en:'Grandma\u2019s hot chocolate',d_es:'',d_en:'',p:'$3.25'},
-  {es:'Jugo en leche',en:'Milkshake',d_es:'Fruta natural.',d_en:'Real fruit.',p:'$4.00'}
+ {id:'san',es:'Sándwiches',en:'Sandwiches',items:[
+  {es:'Sánduche cubano con vegetales',en:'Cuban sandwich with veggies',d_es:'El cubano completo, con vegetales frescos.',d_en:'The full Cuban, with fresh veggies.',p:'$11.00'},
+  {es:'Sánduche cubano tradicional',en:'Traditional Cuban sandwich',d_es:'Jamón, cerdo, queso, pepinillos y mostaza, prensado.',d_en:'Ham, pork, cheese, pickles and mustard, pressed.',p:'$9.00'},
+  {es:'Sánduche de jamón y queso',en:'Ham & cheese sandwich',d_es:'Sencillo y al punto, prensado.',d_en:'Simple and pressed just right.',p:'$8.25'},
+  {es:'Sánduche de desayuno',en:'Breakfast sandwich',d_es:'Con huevo, jamón y queso.',d_en:'With egg, ham and cheese.',p:'$10.50'},
+  {es:'Sánduche de pollo',en:'Chicken sandwich',d_es:'Pollo a la plancha con vegetales.',d_en:'Grilled chicken with veggies.',p:'$11.00'},
+  {es:'Tostada de queso y mantequilla',en:'Cheese & butter toast',d_es:'Pan tostado con mantequilla y queso.',d_en:'Buttered toast with cheese.',p:'$2.75'}
  ]},
- {id:'dul',es:'Dulces',en:'Sweets',items:[
-  {es:'Milhojas',en:'Milhojas',d_es:'',d_en:'',p:'$4.00'},
-  {es:'Pastel de guayaba y queso',en:'Guava & cheese pastry',d_es:'',d_en:'',p:'$4.12'},
-  {es:'Pastel gloria',en:'Pastel gloria',d_es:'',d_en:'',p:'$3.00'},
-  {es:'Brazo de reina',en:'Swiss roll',d_es:'',d_en:'',p:'$4.00'}
+ {id:'pan',es:'Panadería',en:'Bakery',items:[
+  {es:'Pandebono',en:'Pandebono',d_es:'El favorito: suave, quesudo, recién horneado.',d_en:'The favorite: soft, cheesy, fresh-baked.',p:'$1.75'},
+  {es:'Buñuelo',en:'Buñuelo (cheese ball)',d_es:'Dorada bolita de queso, crujiente por fuera.',d_en:'Golden cheese ball, crispy outside.',p:'$1.75'},
+  {es:'Pan de yuca',en:'Pan de yuca',d_es:'Ligero y con mucho queso.',d_en:'Light and extra cheesy.',p:'$2.00'},
+  {es:'Palito de queso',en:'Cheese stick',d_es:'Hojaldre crocante relleno de queso.',d_en:'Crunchy puff pastry filled with cheese.',p:'$2.52'},
+  {es:'Pastel de chocolate',en:'Chocolate pastry',d_es:'Hojaldre con chocolate.',d_en:'Chocolate-filled pastry.',p:'$2.25'},
+  {es:'Pan con queso grande',en:'Large cheese bread',d_es:'Pan grande con queso, para compartir.',d_en:'Large cheese bread, made for sharing.',p:'$6.25'},
+  {es:'Croissant',en:'Croissant',d_es:'Clásico y hojaldrado.',d_en:'Classic and flaky.',p:'$2.60'},
+  {es:'Croissant con queso',en:'Cheese croissant',d_es:'Con queso derretido.',d_en:'With melted cheese.',p:'$3.50'},
+  {es:'Croissant con jamón, queso y huevo',en:'Ham, cheese & egg croissant',d_es:'El desayuno completo en un croissant.',d_en:'The full breakfast in a croissant.',p:'$7.30'},
+  {es:'Croissant de jamón y queso',en:'Ham & cheese croissant',d_es:'Jamón y queso en hojaldre.',d_en:'Ham and cheese in flaky pastry.',p:'$4.90'},
+  {es:'Tequeño (2 unidades)',en:'Tequeños (2 pc)',d_es:'Dos deditos de queso envueltos.',d_en:'Two wrapped cheese sticks.',p:'$3.50'},
+  {es:'Croissant de chocolate',en:'Chocolate croissant',d_es:'Relleno de chocolate.',d_en:'Chocolate-filled.',p:'$3.00'},
+  {es:'Empanada de cambray',en:'Cambray empanada',d_es:'Guayaba y queso, dulce y suave.',d_en:'Guava and cheese, sweet and soft.',p:'$4.60'}
+ ]},
+ {id:'pas',es:'Pasteles',en:'Pastries',items:[
+  {es:'Pastel de arequipe',en:'Dulce de leche pastry',d_es:'Hojaldre con arequipe.',d_en:'Pastry with dulce de leche.',p:'$3.00'},
+  {es:'Chicharrón de guayaba',en:'Guava chicharrón pastry',d_es:'Crujiente, con guayaba.',d_en:'Crispy, with guava.',p:'$3.00'},
+  {es:'Pastel de guayaba y queso',en:'Guava & cheese pastry',d_es:'La pareja clásica colombiana.',d_en:'The classic Colombian pairing.',p:'$3.50'},
+  {es:'Gloria',en:'Gloria pastry',d_es:'Pastel dulce tradicional.',d_en:'Traditional sweet pastry.',p:'$3.50'},
+  {es:'Quesito boricua',en:'Puerto Rican quesito',d_es:'Estilo puertorriqueño, con queso crema.',d_en:'Puerto Rican style, with cream cheese.',p:'$2.60'},
+  {es:'Milhojas',en:'Milhojas',d_es:'Capas de hojaldre con crema y arequipe.',d_en:'Layers of puff pastry with cream and dulce de leche.',p:'$5.00'},
+  {es:'Brazo de reina',en:'Swiss roll',d_es:'Rollo suave con relleno dulce.',d_en:'Soft Swiss roll with sweet filling.',p:'$4.00'},
+  {es:'Conos de arequipe y crema',en:'Dulce de leche & cream cones',d_es:'Conos crocantes rellenos.',d_en:'Crispy filled cones.',p:'$4.00'}
+ ]},
+ {id:'jug',es:'Jugos y café',en:'Juices & Coffee',items:[
+  {es:'Jugo en leche',en:'Juice in milk',d_es:'Frutas tropicales batidas en leche.',d_en:'Tropical fruit blended with milk.',p:'$5.00'},
+  {es:'Jugo en agua',en:'Juice in water',d_es:'Frutas tropicales batidas en agua.',d_en:'Tropical fruit blended with water.',p:'$4.50'},
+  {es:'Jugo de dispensador',en:'Dispenser juice',d_es:'El del dispensador, bien frío.',d_en:'From the dispenser, ice cold.',p:'$4.50'},
+  {es:'Limonada de coco',en:'Coconut lemonade',d_es:'Refrescante, con coco.',d_en:'Refreshing, with coconut.',p:'$3.12'},
+  {es:'Milo frío o tibio',en:'Milo, cold or warm',d_es:'El chocolate de siempre, frío o tibio.',d_en:'The classic malt chocolate, cold or warm.',p:'$3.90'},
+  {es:'Chocolate de la abuela',en:"Grandma's hot chocolate",d_es:'Chocolate caliente tradicional.',d_en:'Traditional hot chocolate.',p:'$2.75'},
+  {es:'Café con leche',en:'Café con leche',d_es:'Como en casa.',d_en:'Just like home.',p:'$2.60'},
+  {es:'Café con leche grande',en:'Café con leche, large',d_es:'La taza grande.',d_en:'The large cup.',p:'$2.75'},
+  {es:'Cortadito',en:'Cortadito',d_es:'Espresso con un toque de leche.',d_en:'Espresso cut with a touch of milk.',p:'$2.75'},
+  {es:'Café latte',en:'Latte',d_es:'Suave y cremoso.',d_en:'Smooth and creamy.',p:'$4.50'},
+  {es:'Iced coffee',en:'Iced coffee',d_es:'Café frío con hielo.',d_en:'Chilled coffee over ice.',p:'$4.75'}
  ]}
 ];
-var curCat='fritos';
+var curCat='des';
 function renderTabs(){
   var l=document.documentElement.lang||'es';
   document.getElementById('menu-tabs').innerHTML=MENU.map(function(c){
