@@ -28,6 +28,8 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;padding-
 .links a{color:var(--ink);text-decoration:none;font-weight:600;font-size:14.5px}
 .links a:hover{color:var(--terra)}
 .cta{background:var(--terra);color:#fff!important;padding:10px 20px;border-radius:12px;text-decoration:none;font-weight:800;font-size:14px}
+.hbtns{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.cta.tel{background:var(--gold)!important;color:#241a05!important;white-space:nowrap}
 /* hero */
 .hero{background:var(--paper);border-bottom:1px solid var(--line)}
 .hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;padding-top:44px;padding-bottom:44px}
@@ -133,12 +135,6 @@ nav{border-bottom:3px solid var(--gold)}
 .morning-cafe{width:100%;height:230px;object-fit:cover;border-radius:16px;border:3px solid #c9a227;box-shadow:0 12px 26px rgba(0,0,0,.35);display:block}
 
 
-.order-strip{background:var(--coffee);padding:24px 0}
-.order-strip .wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.order-strip h3{color:#fff;font-size:19px;margin:0 auto 0 0}
-.obtn{display:inline-block;padding:13px 22px;border-radius:12px;font-weight:800;text-decoration:none;color:#fff;font-size:15.5px}
-.obtn.tel{background:var(--terra)}
-.obtn.dd{background:#eb1700}
 .dish{align-items:center}
 .dish .n{flex:1}
 .dish img.thumb{width:48px;height:48px;object-fit:cover;border-radius:10px;flex:none}
@@ -171,7 +167,7 @@ nav{border-bottom:3px solid var(--gold)}
       <a href="#visitanos" data-es="Visítanos" data-en="Visit us">Visítanos</a>
       <a href="#resenas" data-es="Opiniones" data-en="Reviews">Opiniones</a>
     </div>
-    <a class="cta" href="https://www.doordash.com/store/la-semilla-bakery-sandwich-shop-tampa-921584/" target="_blank" rel="noopener" data-es="Pide a domicilio" data-en="Order delivery">Pide a domicilio</a>
+    <div class="hbtns"><a class="cta tel" href="tel:+18138980080" data-es="📞 Pedir por teléfono" data-en="📞 Order by phone">📞 Pedir por teléfono</a><a class="cta" href="https://www.doordash.com/store/la-semilla-bakery-sandwich-shop-tampa-921584/" target="_blank" rel="noopener" data-es="Pide a domicilio" data-en="Order delivery">Pide a domicilio</a></div>
   </div>
 </nav>
 
@@ -190,14 +186,6 @@ nav{border-bottom:3px solid var(--gold)}
     <img src="imgs/hero.jpg" alt="Mesa de La Semilla: empanadas, calentado, tamal y sándwich cubano">
   </div>
 </header>
-
-<section class="order-strip">
-  <div class="wrap">
-    <h3 data-es="¿Cómo quieres pedir hoy?" data-en="How do you want to order today?">¿Cómo quieres pedir hoy?</h3>
-    <a class="obtn tel" href="tel:+18138980080" data-es="📞 Pedir por teléfono" data-en="📞 Order by phone">📞 Pedir por teléfono</a>
-    <a class="obtn dd" href="https://www.doordash.com/store/la-semilla-bakery-sandwich-shop-tampa-921584/" target="_blank" rel="noopener">DoorDash</a>
-  </div>
-</section>
 
 <section class="block" id="favoritos">
   <div class="wrap">
