@@ -129,13 +129,10 @@ nav{border-bottom:3px solid var(--gold)}
 .gal figcaption{padding:10px 14px;font-weight:600;font-size:14.5px}
 @media (max-width:860px){.gal{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.gal{grid-template-columns:1fr}}
+@media (min-width:861px){.morning{grid-template-columns:1.15fr .8fr 1fr}}
+.morning-cafe{width:100%;height:230px;object-fit:cover;border-radius:16px;border:3px solid #c9a227;box-shadow:0 12px 26px rgba(0,0,0,.35);display:block}
 
 
-.hero-vis{position:relative}
-.hero-cafe{position:absolute;left:14px;bottom:14px;width:44%;background:#fff;border:3px solid var(--terra);border-radius:16px;overflow:hidden;box-shadow:0 12px 28px rgba(0,0,0,.30);margin:0}
-.hero-cafe img{width:100%;height:104px;object-fit:cover;border-radius:0;box-shadow:none;display:block}
-.hero-cafe figcaption{background:var(--coffee);color:#fff;font-size:12.5px;font-weight:700;padding:7px 10px;text-align:center}
-.gem{margin-top:14px;display:inline-block;background:#fff7e0;border:1.5px solid var(--terra);color:var(--coffee);font-weight:700;font-size:14.5px;border-radius:14px;padding:10px 16px}
 .order-strip{background:var(--coffee);padding:24px 0}
 .order-strip .wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
 .order-strip h3{color:#fff;font-size:19px;margin:0 auto 0 0}
@@ -183,15 +180,14 @@ nav{border-bottom:3px solid var(--gold)}
     <div>
       <span class="kick" data-es="Panadería colombiana · Tampa" data-en="Colombian bakery · Tampa">Panadería colombiana · Tampa</span>
       <h1 data-es="El sabor de Colombia, <em>recién horneado</em>" data-en="The taste of Colombia, <em>fresh from the oven</em>">El sabor de Colombia, <em>recién horneado</em></h1>
-      <p class="lead" data-es="Empanadas, pan de bono, sándwich cubano y café colombiano de verdad. Desayuno y almuerzo todos los días desde las 6 AM." data-en="Empanadas, pan de bono, Cuban sandwich and real Colombian coffee. Breakfast and lunch every day from 6 AM.">Empanadas, pan de bono, sándwich cubano y café colombiano de verdad. Desayuno y almuerzo todos los días desde las 6 AM.</p>
+      <p class="lead" data-es="Empanadas, pan de bono, sándwich cubano y café colombiano de verdad, en una gema escondida en Tampa. Desayuno y almuerzo todos los días desde las 6 AM." data-en="Empanadas, pan de bono, Cuban sandwich and real Colombian coffee, in a hidden gem in Tampa. Breakfast and lunch every day from 6 AM.">Empanadas, pan de bono, sándwich cubano y café colombiano de verdad, en una gema escondida en Tampa. Desayuno y almuerzo todos los días desde las 6 AM.</p>
       <div class="hero-btns">
         <a class="btn hot" href="#menu" data-es="Ver el menú" data-en="See the menu">Ver el menú</a>
         <a class="btn line" href="tel:+18138980080" data-es="Llamar ahora" data-en="Call now">Llamar ahora</a>
       </div>
       <div class="stars-row"><b>4.6 ★</b> <span data-es="431 reseñas en Google" data-en="431 Google reviews">431 reseñas en Google</span></div>
-      <div><span class="gem" data-es="💎 «Una gema escondida en Tampa» — así la llaman sus clientes" data-en="💎 “A hidden gem in Tampa” — that's what its customers call it">💎 «Una gema escondida en Tampa» — así la llaman sus clientes</span></div>
     </div>
-    <div class="hero-vis"><img src="imgs/hero.jpg" alt="Mesa de La Semilla: empanadas, calentado, tamal y sándwich cubano"><figure class="hero-cafe"><img src="imgs/g-cafe.jpg" alt="Taza de café con leche de La Semilla"><figcaption data-es="☕ Café colombiano, recién hecho" data-en="☕ Colombian coffee, freshly brewed">☕ Café colombiano, recién hecho</figcaption></figure></div>
+    <img src="imgs/hero.jpg" alt="Mesa de La Semilla: empanadas, calentado, tamal y sándwich cubano">
   </div>
 </header>
 
@@ -247,6 +243,7 @@ nav{border-bottom:3px solid var(--gold)}
         <h2 data-es="Desde las <em>6AM</em>" data-en="Open from <em>6 AM</em>">Desde las <em>6AM</em></h2>
         <p data-es="Café colombiano recién hecho, calentado con huevo, arepa con queso y pan calientito para empezar el día como se debe." data-en="Fresh Colombian coffee, calentado with egg, arepa with cheese and warm bread to start the day right.">Café colombiano recién hecho, calentado con huevo, arepa con queso y pan calientito para empezar el día como se debe.</p>
       </div>
+      <img class="morning-cafe" src="imgs/g-cafe.jpg" alt="Taza de café con leche de La Semilla">
       <div class="hours">
         <div><b data-es="Lun–Vie" data-en="Mon–Fri">Lun–Vie</b>: 6:00 AM – 7:00 PM</div>
         <div><b data-es="Sábado" data-en="Saturday">Sábado</b>: 6:00 AM – 5:00 PM</div>
