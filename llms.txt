@@ -1,0 +1,21 @@
+# La Semilla Bakery Sandwich Shop
+
+> Panadería y cafetería colombiana en Tampa, Florida: panes, dulces y productos colombianos, sándwiches, desayunos y jugos naturales, desde temprano en la mañana.
+
+## Datos del negocio
+
+- Nombre: La Semilla Bakery Sandwich Shop
+- Dirección: 4429 Gunn Hwy, Suite B, Tampa, FL
+- Teléfono: +1 (813) 898-0080
+- Sitio web: https://semillabakerytampa.com
+
+## Qué ofrece
+
+- Panadería colombiana: panes, dulces y productos típicos colombianos
+- Sándwiches y desayunos
+- Jugos naturales y café
+- Menú completo publicado en el sitio web
+
+## Enlaces
+
+- Menú y productos: https://semillabakerytampa.com
