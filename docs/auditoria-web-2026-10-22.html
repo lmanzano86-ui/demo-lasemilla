@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Auditoría web — semillabakerytampa.com</title>
+<style>
+@page { size: Letter; margin: 2cm 1.8cm; }
+body { font-family: 'Segoe UI', Arial, sans-serif; color: #241c10; font-size: 12.5px; line-height: 1.55; }
+h1 { font-size: 22px; margin: 0 0 2px; }
+h2 { font-size: 15.5px; margin: 22px 0 6px; border-bottom: 2px solid #caa437; padding-bottom: 3px; }
+h3 { font-size: 13px; margin: 14px 0 4px; }
+.sub { color: #7a6a52; margin: 0 0 14px; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; }
+td, th { border: 1px solid #e9dcba; padding: 5px 8px; text-align: left; }
+th { background: #faf6ec; }
+.nota { font-size: 20px; font-weight: 800; color: #7a5c00; }
+ul { margin: 4px 0 8px; padding-left: 18px; }
+li { margin-bottom: 4px; }
+.tag { font-weight: 700; }
+.small { font-size: 11px; color: #7a6a52; }
+</style>
+</head>
+<body>
+<h1>Auditoría web independiente — semillabakerytampa.com</h1>
+<p class="sub">Sitio de La Semilla Bakery Sandwich Shop (Tampa, FL) · Auditoría técnica y comercial realizada el 22 de octubre de 2026 sobre la versión pública en línea · Alcance: diseño, estructura, contenido, SEO, rendimiento, seguridad, accesibilidad y conversión.</p>
+
+<h2>Calificación global: 7.0 / 10</h2>
+<table>
+<tr><th>Área</th><th>Nota</th><th>Lectura rápida</th></tr>
+<tr><td>Diseño y experiencia</td><td class="nota">8.0</td><td>Marca coherente, navegación clara, CTAs visibles.</td></tr>
+<tr><td>Estructura y contenido</td><td class="nota">7.5</td><td>Contenido real y completo; un resto de «demo» en el pie y horarios por confirmar.</td></tr>
+<tr><td>SEO</td><td class="nota">5.5</td><td>Base local correcta; faltan datos estructurados, OG, canonical y sitemap real.</td></tr>
+<tr><td>Rendimiento</td><td class="nota">6.0</td><td>HTML ligero, pero 1.6 MB de imágenes sin optimizar ni carga diferida.</td></tr>
+<tr><td>Seguridad</td><td class="nota">7.0</td><td>HTTPS correcto; cabeceras incompletas (riesgo bajo en sitio estático).</td></tr>
+<tr><td>Accesibilidad</td><td class="nota">6.5</td><td>Etiquetas alt casi completas; contraste secundario en el límite.</td></tr>
+<tr><td>Conversión</td><td class="nota">7.0</td><td>Teléfono, WhatsApp y DoorDash a un toque; sin analítica ni pedido propio.</td></tr>
+</table>
+
+<h2>🔴 Hallazgos críticos</h2>
+<ul>
+<li><span class="tag">Pie de página de «demo»:</span> el sitio oficial y pagado por el cliente cierra con «© 2026 La Semilla Bakery Sandwich Shop · Demo con fines ilustrativos». Resto de la fase de demostración: resta credibilidad ante cualquier visitante y debe retirarse de inmediato.</li>
+<li><span class="tag">Horarios de fin de semana sin confirmar:</span> se publican sábado 6:00 AM–5:00 PM y domingo 6:00 AM–4:00 PM, heredados de la versión anterior; el dueño solo confirmó el horario de lunes a viernes (6 AM–7 PM). Publicar un horario no confirmado es la causa clásica de reseñas negativas («fui y estaba cerrado»).</li>
+<li><span class="tag">Sin datos estructurados (JSON-LD LocalBusiness):</span> Google no recibe en formato máquina el negocio, su dirección, teléfono, horario ni rango de precios. Es la oportunidad de SEO local más importante y está sin hacer.</li>
+</ul>
+
+<h2>🟠 Hallazgos importantes</h2>
+<ul>
+<li><span class="tag">Sin etiquetas Open Graph / Twitter:</span> al compartir el enlace en WhatsApp o Facebook no aparece foto ni descripción cuidada. Para un negocio hispano, cuyo tráfico llega por WhatsApp, la vista previa ES el anuncio.</li>
+<li><span class="tag">Doble versión sin canonical:</span> semillabakerytampa.com y www.semillabakerytampa.com sirven el mismo sitio (ambas 200) sin etiqueta canonical ni redirección entre ellas: contenido duplicado a ojos de Google.</li>
+<li><span class="tag">robots.txt y sitemap.xml inexistentes:</span> ambas rutas responden 200 con el HTML de la portada (comportamiento del hospedaje ante rutas no encontradas). No hay sitemap válido que registrar en Search Console ni robots.txt real.</li>
+<li><span class="tag">Imágenes pesadas y sin diferir:</span> 21 imágenes referenciadas suman ≈1.6 MB (la principal, 171 KB). Ninguna usa carga diferida (lazy), formato WebP/AVIF, versiones por tamaño ni atributos de dimensiones: la carga inicial en móvil es pesada y el contenido «salta» al cargar (CLS).</li>
+<li><span class="tag">Sin analítica:</span> no hay Google Analytics ni Cloudflare Web Analytics. El negocio no puede saber cuántas visitas recibe, de dónde llegan ni qué secciones funcionan.</li>
+<li><span class="tag">Inglés no indexable:</span> la versión EN se genera por JavaScript en la misma URL; Google solo indexa el español. La clientela angloparlante no encontrará la página buscando en inglés.</li>
+<li><span class="tag">Sin redes sociales enlazadas:</span> no hay enlaces a Instagram ni Facebook en toda la página.</li>
+</ul>
+
+<h2>🟡 Hallazgos menores</h2>
+<ul>
+<li>Cabeceras de seguridad incompletas: presentes nosniff y referrer-policy; ausentes HSTS, Content-Security-Policy y protección contra incrustación en iframes. Riesgo bajo en un sitio estático, subsanable en Cloudflare en minutos.</li>
+<li>Contraste del texto secundario (gris cálido sobre crema, ≈4:1) en el límite de WCAG para texto pequeño.</li>
+<li>Favicon: se usa el logo completo en JPG; falta icono dedicado y theme-color del navegador.</li>
+<li>Las 3 reseñas visibles son textos copiados; no hay enlace al perfil de Google para verificarlas ni para dejar una nueva.</li>
+<li>Sin correo de contacto (solo teléfono y WhatsApp): aceptable, pero limita a clientes corporativos o de eventos.</li>
+</ul>
+
+<h2>🟢 Lo que está bien hecho</h2>
+<ul>
+<li>HTTPS con redirección 301 desde http y cero contenido mixto.</li>
+<li>Título y meta-descripción orientados a la búsqueda local («Panadería colombiana en Tampa») e incluyen la dirección.</li>
+<li>Estructura semántica limpia: un solo h1, h2 en orden, lang="es", viewport móvil correcto.</li>
+<li>Contenido 100% real: menú con 68 precios, fotos propias del negocio, datos de contacto consistentes (NAP) y botón «Cómo llegar» bien enlazado a Google Maps.</li>
+<li>Conversión cuidada: 5 enlaces de llamada, WhatsApp flotante y DoorDash a un toque; enlaces externos con rel="noopener".</li>
+<li>HTML ligero (38 KB), sin CSS/JS externos que bloqueen y con fuentes del sistema: pocos pedidos de red y render rápido.</li>
+<li>Hospedaje en red global de Cloudflare (rápido y sin costo), con el aviso de «precios del menú de mostrador» que protege ante cambios de precio.</li>
+</ul>
+
+<h2>Plan de corrección priorizado</h2>
+<ul>
+<li><b>1.</b> Retirar «Demo con fines ilustrativos» del pie. <b>2.</b> Confirmar con el dueño los horarios de sábado y domingo. <b>3.</b> Agregar JSON-LD LocalBusiness (NAP, horario, precios, geo). <b>4.</b> Etiquetas Open Graph con la foto principal. <b>5.</b> Canonical + redirección de www a la versión principal. <b>6.</b> robots.txt y sitemap.xml reales y registro en Search Console. <b>7.</b> Optimizar imágenes (WebP, lazy, dimensiones, peso &lt; 600 KB total). <b>8.</b> Activar Cloudflare Web Analytics (gratis). <b>9.</b> Cabeceras HSTS/CSP básicas. <b>10.</b> Enlaces a redes sociales y al perfil de reseñas de Google.</li>
+</ul>
+
+<p class="small">Conclusión: una página comercial sólida y atractiva, con los fundamentos de venta bien puestos, pero con el acabado técnico (SEO local, rendimiento de imágenes y detalles de publicación) al ~80%. Nada de lo encontrado exige rehacerla: son correcciones puntuales, la mayoría de menos de un día de trabajo.</p>
+</body>
+</html>
